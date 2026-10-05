@@ -5,9 +5,9 @@ USE db_fastcarveiculos;
 
 CREATE TABLE sedes (
     nome VARCHAR(50) NOT NULL,
-    endereco VARCHAR(20),
-    telefone VARCHAR(11),
-    nomedogerente VARCHAR(50),
+    endereco VARCHAR(20) NOT NULL,
+    telefone VARCHAR(11) NOT NULL,
+    nomedogerente VARCHAR(50) NOT NULL,
     multa_por_entrega_em_outro_ponto DECIMAL(5,2)
 );
 
@@ -42,8 +42,9 @@ CREATE TABLE reservas (
 CREATE TABLE clientes (
     nome VARCHAR(20),
     CPF VARCHAR(11),
+    CPF VARCHAR(11) NOT NULL,
     numero_da_CNH VARCHAR(11) NOT NULL,
-    validade_da_CNH VARCHAR(4),
+    validade_da_CNH VARCHAR(4) NOT NULL,
     categoria_cnh ENUM('A', 'B', 'AB', 'C', 'D', 'E')
 );
 
