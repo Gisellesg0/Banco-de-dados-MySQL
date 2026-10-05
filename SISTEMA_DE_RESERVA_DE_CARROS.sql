@@ -40,8 +40,7 @@ CREATE TABLE reservas (
 
 
 CREATE TABLE clientes (
-    nome VARCHAR(20),
-    CPF VARCHAR(11),
+    nome VARCHAR(20) NOT NULL,
     CPF VARCHAR(11) NOT NULL,
     numero_da_CNH VARCHAR(11) NOT NULL,
     validade_da_CNH VARCHAR(4) NOT NULL,
